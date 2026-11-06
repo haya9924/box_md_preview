@@ -109,11 +109,18 @@ copy, removes it from the DOM, and hides it in CSS as a last resort.
 
 ## 📄 Licence
 
-GPLv3, see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+MIT, see [LICENSE](LICENSE).
 
-The bundled MathJax build is Apache-2.0; its licence text is shipped inside the
-patch bundle as `MathJax-LICENSE.txt`. Box's own preview assets remain the
-property of Box, Inc.; the patch only ships the small page that replaces them.
+The source in this repository is MIT. Two things it ships keep their own terms:
+
+- The built `.mpp` links the [Morphe patches library](https://github.com/MorpheApp),
+  which is GPLv3, so the bundle as a whole is passed on under GPLv3
+  (see [NOTICE](NOTICE) for the Morphe name restriction).
+- The bundled MathJax build is Apache-2.0; its licence text is shipped inside the
+  patch bundle as `MathJax-LICENSE.txt`.
+
+Box's own preview assets remain the property of Box, Inc.; the patch only ships
+the small page that replaces them.
 
 ## 🚀 Release
 

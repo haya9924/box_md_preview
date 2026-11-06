@@ -8,3 +8,5 @@
 - Centre display math and let a formula wider than the screen scroll sideways.
 - Follow Box's night mode in the preview, with no light-coloured gaps left.
 - Leave non-math Markdown untouched: code fences and inline code keep their `$`.
+- The repository source is licensed under MIT; the bundle keeps the terms of the
+  libraries it links (Morphe: GPLv3, MathJax: Apache-2.0).

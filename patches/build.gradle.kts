@@ -6,7 +6,7 @@ patches {
         author = "haya9924"
         contact = "na"
         website = "na"
-        license = "GPLv3"
+        license = "MIT"
     }
 }
 
