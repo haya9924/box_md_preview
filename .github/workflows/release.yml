@@ -11,6 +11,7 @@ jobs:
     name: Release
     permissions:
       contents: write
+      packages: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,13 +23,13 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      # The Morphe patch registry is a GitHub Packages repository. The automatic
-      # GITHUB_TOKEN only reaches repositories of this account, so set a secret
-      # named PACKAGES_TOKEN (classic token, read:packages) for the build.
+      # The Morphe patch registry is served from GitHub Packages. The automatic
+      # GITHUB_TOKEN is enough to read a public package registry, so no personal
+      # token is stored for the build.
       - name: Build patch bundle
         env:
           GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew :patches:buildAndroid --no-daemon
 
       - name: Pick the bundle and check the version
